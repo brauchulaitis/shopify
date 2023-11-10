@@ -6,6 +6,7 @@
   <% @products.each do |product| %>
     <%= render product %>
     <p>
+      <%= button_to "Buy this product", checkout_create_path, params: {id: product.id}, remote: true %>
       <%= link_to "Show this product", product %>
     </p>
   <% end %>
